@@ -1,0 +1,23 @@
+{
+  "presets": [
+    ["@babel/preset-env",
+      {
+        "targets":{
+          "chrome":67,
+          "browsers":["last 2 versions", "safari 7"]
+        },
+        "useBuiltIns": "usage" //自动引入所需的@babel/polyfill(按需加载)
+      }
+    ],
+    "@babel/preset-react"
+  ],
+
+  "plugins":[
+    ["@babel/plugin-transform-runtime",{
+      "corejs": 2,
+      "helpers": true,
+      "regenerator": true,
+      "useESModules": false
+    }]
+  ]
+}
