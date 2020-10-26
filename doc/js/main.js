@@ -9,6 +9,7 @@ import '../css/main.css';
 import '../css/header.scss';
 import createAvatar from './createAvatar';
 import {add} from './MathFold/math';
+const Utils = require('./utils/Utils');
 
 createAvatar();
 new Header();
@@ -33,3 +34,7 @@ dom.append(divB);
 console.log(process.env.NODE_ENV);//当设置了mode参数,webpack会默认形成全局变量process.env.NODE_ENV
 
 add(1,2);
+
+let ad = [23,45,12,1,78];
+Utils.srrt(ad);
+console.log(ad);
