@@ -4,11 +4,12 @@
 // const {CleanWebpackPlugin} = require("clean-webpack-plugin");
 // const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const commonConfig = require('./webpack.common.js');
-const merge = require('webpack-merge');
+const {merge} = require('webpack-merge');
 
 const prodConfig = {
   mode: 'production',
-  devtool: 'cheap-module-source-map',
+  // devtool: 'cheap-module-source-map',
+  devtool: 'source-map',
 }
 
 module.exports = merge(commonConfig, prodConfig);

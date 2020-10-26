@@ -9,7 +9,7 @@ import '../css/main.css';
 import '../css/header.scss';
 import createAvatar from './createAvatar';
 import {add} from './MathFold/math';
-const Utils = require('./utils/Utils');
+import _ from 'lodash';
 
 createAvatar();
 new Header();
@@ -35,6 +35,4 @@ console.log(process.env.NODE_ENV);//当设置了mode参数,webpack会默认形�
 
 add(1,2);
 
-let ad = [23,45,12,1,78];
-Utils.srrt(ad);
-console.log(ad);
+console.log(_.join(['a','b','c'],'***'));
